@@ -1,0 +1,85 @@
+Question 1 (WHERE – Basic but important)
+Table: Employees
+
+Columns:
+
+Id
+
+Name
+
+Department
+
+Salary
+
+Task:
+
+👉 Write a query to get employees who work in IT department.
+select *  from Employee where Department = 'IT'
+
+Question 2  Table: Employees
+
+👉 Employees from IT department whose salary is greater than 50000.
+SELECT *
+FROM Employees
+WHERE Department = 'IT'
+AND Salary > 50000;
+
+Question 3 – GROUP BY
+
+Table: Employees
+
+👉 Write a query to show how many employees are in each department.
+
+SELECT Department, COUNT(*) 
+FROM Employees
+GROUP BY Department;
+
+
+Question 4
+
+Table: Employees
+
+👉 Show only those departments where the number of employees is more than 2.
+SELECT Department, COUNT(*)
+FROM Employees
+GROUP BY Department
+HAVING COUNT(*) > 2;
+
+
+Question 5  Table: Students
+Columns:
+
+Id
+
+Email
+
+👉 Find email IDs that are present more than once in the table.
+
+select Email,Count(*) as same email 
+from Students 
+group by email 
+having count >1
+
+
+Question 6       Table: Employees
+
+Columns:
+
+Id
+
+Name
+
+Department
+
+Salary
+
+👉 Find employees whose salary is greater than the average salary of the company.
+
+SELECT *
+FROM Employees
+WHERE Salary > (SELECT AVG(Salary) FROM Employees);
+
+
+
+
+
