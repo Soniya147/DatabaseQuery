@@ -1,6 +1,50 @@
 Question1      What is SQL Server?
 👉 SQL Server is a relational database management system developed by Microsoft. It is used to store, manage, and retrieve data, and we use SQL language to perform operations like insert, update, delete, and select.
+
 Question2   What is a database?
 👉 Database is a structured collection of data stored in a system, which allows users to insert, update, delete, and retrieve information efficiently.
+
 Question3  What is a table in SQL Server?
-A table is a structured format in SQL Server where data is stored in rows and columns Each row represents a record, and each column represents a field of the data.
+👉 A table is a structured format in SQL Server where data is stored in rows and columns Each row represents a record, and each column represents a field of the data.
+
+Question4   What is the difference between CHAR and VARCHAR?
+👉| CHAR                    | VARCHAR                   |
+| ----------------------- | ------------------------- |
+| Fixed size              | Variable size             |
+| Always uses full memory | Uses only required memory |
+| Faster sometimes        | Saves space               |
+
+example
+Name CHAR(10)
+and you store → Ram
+
+👉 SQL Server will still use 10 characters (Ram + 7 spaces).
+
+Name VARCHAR(10)
+👉 it will use only 3 characters.
+
+Question 5   What is a Primary Key?
+
+👉A Primary Key is a column or combination of columns that uniquely identifies each record in a table. It does not allow NULL values or duplicate values.
+
+Question 6  What is a Foreign Key?
+👉 Foreign key establishes a relationship between two tables by referencing the primary key of another table.
+
+Question 7 What is the difference between Primary Key and Foreign Key?
+| Primary Key                | Foreign Key                            |
+| -------------------------- | -------------------------------------- |
+| Uniquely identifies record | Refers to primary key of another table |
+| No NULL, No duplicate      | Can have duplicate, sometimes NULL     |
+| One per table              | Multiple allowed                       |
+| Parent table               | Child table                            |
+
+Question 8    DELETE vs TRUNCATE vs DROP
+👉 DELETE is used to remove specific rows using a WHERE condition, and it logs each row deletion.
+TRUNCATE removes all rows from the table without removing the structure, it is faster, and it resets the identity.
+DROP removes the complete table including its structure, data, indexes, and constraints.
+
+Question 9  What is a JOIN in SQL Server?
+
+
+
+
