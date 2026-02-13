@@ -44,6 +44,27 @@ TRUNCATE removes all rows from the table without removing the structure, it is f
 DROP removes the complete table including its structure, data, indexes, and constraints.
 
 Question 9  What is a JOIN in SQL Server?
+👉 JOIN is used to combine data from two or more tables based on a related column between them. It helps us retrieve meaningful information from multiple tables.
+
+
+
+Question 10   How many types of joins are there in SQL Server? Name them.
+
+👉 There are mainly four types of joins in SQL Server:
+
+INNER JOIN
+
+LEFT OUTER JOIN
+
+RIGHT OUTER JOIN
+
+FULL OUTER JOIN
+
+CROSS JOIN
+
+SELF JOIN (special case)
+
+Question 11  What is INNER JOIN?
 
 
 
