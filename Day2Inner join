@@ -1,0 +1,91 @@
+Question 1    Inner Join 
+SELECT *
+FROM Customer c
+INNER JOIN Orders o 
+    ON c.CustomerID = o.CustomerID;
+
+
+Question 2 What happens to the records that do NOT match in INNER JOIN?
+👉 Non-matching rows are filtered out.
+🔥 Strong sentence for interview.
+Table A
+| Id |
+| -- |
+| 1  |
+| 2  |
+
+Table B
+
+| Id |
+| -- |
+| 2  |
+| 3  |
+
+Result → only 2
+
+👉 1 and 3 will NOT come
+👉 not even NULL
+
+
+Question 3 Can INNER JOIN be used between more than two tables?
+
+Yes, INNER JOIN can be used to join more than two tables by adding multiple join conditions.
+SELECT *
+FROM Orders o
+INNER JOIN Customers c ON o.CustomerId = c.CustomerId
+INNER JOIN Payments p ON o.OrderId = p.OrderId;
+
+CROSS JOIN
+
+👉 Combines every row of first table with every row of second table.
+
+If:
+
+Table A → 3 rows
+
+Table B → 4 rows
+
+Result = 3 × 4 = 12 rows.
+
+Example
+Customers
+Id
+1
+2
+Products
+Id
+10
+20
+
+result:
+
+| CustomerId | ProductId |
+| ---------- | --------- |
+| 1          | 10        |
+| 1          | 20        |
+| 2          | 10        |
+| 2          | 20        |
+
+
+SELECT *
+FROM Customers
+CROSS JOIN Products;
+
+
+ SELF JOIN  👉 A table joined with itself.
+
+Used when table contains related data inside same table.
+
+
+| EmpId | Name  | ManagerId |
+| ----- | ----- | --------- |
+| 1     | Ram   | NULL      |
+| 2     | Shyam | 1         |
+
+
+SELECT e.Name AS Employee, m.Name AS Manager
+FROM Employees e
+LEFT JOIN Employees m 
+ON e.ManagerId = m.EmpId;
+
+
