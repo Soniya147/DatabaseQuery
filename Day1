@@ -65,6 +65,7 @@ CROSS JOIN
 SELF JOIN (special case)
 
 Question 11  What is INNER JOIN?
+👉 INNER JOIN returns only the records that have matching values in both tables based on the join condition.
 
 
 
